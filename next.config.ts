@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   experimental: {
-    agentFeedback: true,
+    agentFeedback: process.env.NODE_ENV !== "production",
   },
   cacheComponents: true,
   partialPrefetching: true,
